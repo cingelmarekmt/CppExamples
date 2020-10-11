@@ -8,15 +8,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ClassicSingleton.cpp">
+    <ClCompile Include="PrecompiledDeclarations.cpp" />
+    <ClCompile Include="ModernSingleton.cpp">
       <Filter>Singletons</Filter>
     </ClCompile>
-    <ClCompile Include="PrecompiledDeclarations.cpp" />
+    <ClCompile Include="MeyersSingletonA.cpp">
+      <Filter>Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="MeyersSingletonB.cpp">
+      <Filter>Singletons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ClassicSingleton.h">
+    <ClInclude Include="PrecompiledDeclarations.h" />
+    <ClInclude Include="ModernSingleton.h">
       <Filter>Singletons</Filter>
     </ClInclude>
-    <ClInclude Include="PrecompiledDeclarations.h" />
+    <ClInclude Include="MeyersSingletonA.h">
+      <Filter>Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="MeyersSingletonB.h" />
   </ItemGroup>
 </Project>

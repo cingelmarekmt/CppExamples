@@ -142,14 +142,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ClassicSingleton.cpp" />
+    <ClCompile Include="MeyersSingletonA.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MeyersSingletonB.cpp" />
+    <ClCompile Include="ModernSingleton.cpp" />
     <ClCompile Include="PrecompiledDeclarations.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ClassicSingleton.h" />
+    <ClInclude Include="MeyersSingletonA.h" />
+    <ClInclude Include="MeyersSingletonB.h" />
+    <ClInclude Include="ModernSingleton.h" />
     <ClInclude Include="PrecompiledDeclarations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
