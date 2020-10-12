@@ -7,6 +7,7 @@ using namespace std;
 namespace example
 {
 
+	std::mutex MeyersSingletonB::_initMutex;
 	MeyersSingletonB * MeyersSingletonB::_instance = nullptr;
 
 	MeyersSingletonB::MeyersSingletonB() = default;
@@ -16,8 +17,11 @@ namespace example
 	{
 		if (_instance == nullptr)
 		{
-			assertm(_instance != nullptr, "Singleton is valid!");
-			_instance = new MeyersSingletonB();
+			std::lock_guard lk(_initMutex);
+			if (_instance == nullptr)
+			{
+				_instance = new MeyersSingletonB();
+			}
 		}
 
 		return _instance;

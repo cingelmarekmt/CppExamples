@@ -7,15 +7,15 @@ using namespace std;
 namespace example
 {
 
+	std::once_flag ModernSingleton::_initFlag;
 	ModernSingleton * ModernSingleton::_instance = nullptr;
-	std::once_flag ModernSingleton::static_flag;
 
 	ModernSingleton::ModernSingleton() = default;
 	ModernSingleton::~ModernSingleton() = default;
 
 	ModernSingleton * ModernSingleton::Instance()
 	{
-		std::call_once(static_flag, []() { _instance = new ModernSingleton(); });
+		std::call_once(_initFlag, []() { _instance = new ModernSingleton(); });
 		return _instance;
 	}
 

@@ -16,7 +16,7 @@ namespace example
 
 	public:
 
-		MeyersSingletonA(MeyersSingletonA & other) = delete;				// Disable copy constructor.
+		MeyersSingletonA(MeyersSingletonA & other) = delete;			// Disable copy constructor.
 		void operator=(const MeyersSingletonA &) = delete;				// Disable assignee operator.
 		MeyersSingletonA(MeyersSingletonA &&) = delete;					// Disable move constructor.
 		MeyersSingletonA & operator=(MeyersSingletonA &&) = delete;		// Disable move assignee operator.

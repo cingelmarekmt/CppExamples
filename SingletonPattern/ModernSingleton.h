@@ -7,8 +7,8 @@ namespace example
 	{
 	private:
 
+		static std::once_flag _initFlag;
 		static ModernSingleton * _instance;
-		static std::once_flag static_flag;
 
 	public:
 

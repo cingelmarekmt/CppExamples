@@ -27,6 +27,8 @@
     <ClInclude Include="MeyersSingletonA.h">
       <Filter>Singletons</Filter>
     </ClInclude>
-    <ClInclude Include="MeyersSingletonB.h" />
+    <ClInclude Include="MeyersSingletonB.h">
+      <Filter>Singletons</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
