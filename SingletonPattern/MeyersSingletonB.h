@@ -8,6 +8,8 @@ namespace example
 		static std::mutex _initMutex;
 		static MeyersSingletonB * _instance;
 
+		int _counter;
+
 	public:
 
 		MeyersSingletonB();
@@ -27,6 +29,7 @@ namespace example
 	public:
 
 		void Print();
+		void Increment();
 
 	};
 

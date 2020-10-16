@@ -10,6 +10,8 @@ namespace example
 		static std::once_flag _initFlag;
 		static ModernSingleton * _instance;
 
+		int _counter;
+
 	public:
 
 		ModernSingleton();
@@ -29,6 +31,7 @@ namespace example
 	public:
 
 		void Print();
+		void Increment();
 
 	};
 

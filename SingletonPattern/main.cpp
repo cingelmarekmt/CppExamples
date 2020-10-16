@@ -55,6 +55,49 @@ int main()
 		t4.join();
 	}
 
+	size_t iterationCount = 100000;
+
+	//std::cout << std::fixed << std::setw(24) << std::endl;
+
+	{
+		const auto t1 = std::chrono::high_resolution_clock::now();
+		for (int index = 0; index < iterationCount; ++index)
+		{
+			example::MeyersSingletonA::Instance()->Increment();
+		}
+		const auto t2 = std::chrono::high_resolution_clock::now();
+		const auto timeSpan = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
+		std::cout << "MeyersSingletonA time span: " << timeSpan.count() << std::endl;
+	}
+
+	{
+		const auto t1 = std::chrono::high_resolution_clock::now();
+		for (int index = 0; index < iterationCount; ++index)
+		{
+			example::MeyersSingletonB::Instance()->Increment();
+		}
+		const auto t2 = std::chrono::high_resolution_clock::now();
+		const auto timeSpan = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
+		std::cout << "MeyersSingletonB time span: " << timeSpan.count() << std::endl;
+	}
+
+	{
+		const auto t1 = std::chrono::high_resolution_clock::now();
+		for (int index = 0; index < iterationCount; ++index)
+		{
+			example::ModernSingleton::Instance()->Increment();
+		}
+		const auto t2 = std::chrono::high_resolution_clock::now();
+		const auto timeSpan = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
+		std::cout << "ModernSingleton time span: " << timeSpan.count() << std::endl;
+	}
+
+
 	std::cout << std::endl;
 	std::cout << "Hello Singleton!" << std::endl;
+
+
+	int i;
+	while (std::cin >> i)
+		std::cout << i << std::endl;
 }

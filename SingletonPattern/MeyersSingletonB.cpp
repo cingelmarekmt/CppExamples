@@ -2,15 +2,18 @@
 
 #include "MeyersSingletonB.h"
 
-using namespace std;
-
 namespace example
 {
 
 	std::mutex MeyersSingletonB::_initMutex;
 	MeyersSingletonB * MeyersSingletonB::_instance = nullptr;
 
-	MeyersSingletonB::MeyersSingletonB() = default;
+	MeyersSingletonB::MeyersSingletonB() :
+		_counter(0)
+	{
+
+	}
+
 	MeyersSingletonB::~MeyersSingletonB() = default;
 
 	MeyersSingletonB * MeyersSingletonB::Instance()
@@ -29,7 +32,12 @@ namespace example
 
 	void MeyersSingletonB::Print()
 	{
-		cout << __FUNCTION__ << "\n";
+		std::cout << __FUNCTION__ << "\n";
+	}
+
+	void MeyersSingletonB::Increment()
+	{
+		++_counter;
 	}
 
 }

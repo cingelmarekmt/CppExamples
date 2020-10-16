@@ -9,6 +9,8 @@ namespace example
 
 		static MeyersSingletonA * _instance;
 
+		int _counter;
+
 	public:
 
 		MeyersSingletonA();
@@ -28,6 +30,7 @@ namespace example
 	public:
 
 		void Print();
+		void Increment();
 
 	};
 
