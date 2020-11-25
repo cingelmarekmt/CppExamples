@@ -12,6 +12,10 @@
     <ClCompile Include="ThreadWorker.cpp">
       <Filter>ThreadPool</Filter>
     </ClCompile>
+    <ClCompile Include="ThreadPoolF.cpp">
+      <Filter>ThreadPoolF</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadTaskF.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PrecompiledDeclarations.h" />
@@ -24,10 +28,17 @@
     <ClInclude Include="ThreadWorker.h">
       <Filter>ThreadPool</Filter>
     </ClInclude>
+    <ClInclude Include="ThreadPoolF.h">
+      <Filter>ThreadPoolF</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadTaskF.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ThreadPool">
       <UniqueIdentifier>{1b12a38e-6529-41fa-9491-7a034d6d3b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThreadPoolF">
+      <UniqueIdentifier>{207b16c6-d2a4-4343-8d58-df937a78d714}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

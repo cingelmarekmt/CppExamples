@@ -154,13 +154,17 @@
     </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="ThreadPoolF.cpp" />
     <ClCompile Include="ThreadTask.cpp" />
+    <ClCompile Include="ThreadTaskF.cpp" />
     <ClCompile Include="ThreadWorker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PrecompiledDeclarations.h" />
     <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="ThreadPoolF.h" />
     <ClInclude Include="ThreadTask.h" />
+    <ClInclude Include="ThreadTaskF.h" />
     <ClInclude Include="ThreadWorker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

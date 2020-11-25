@@ -77,14 +77,12 @@ namespace example
 
 			for (const auto & task : tasks)
 			{
-				auto t1 = std::chrono::high_resolution_clock::now();
+				const auto t1 = std::chrono::high_resolution_clock::now();
 				task->Step();
-				auto t2 = std::chrono::high_resolution_clock::now();
-				task->PushStepDuration(std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1));
+				const auto t2 = std::chrono::high_resolution_clock::now();
+				const auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1);
+				task->PushStepDuration(duration);
 			}
-
-
-
 		}
 
 		std::cout << "Thread [" << std::this_thread::get_id() << "] ending..." << std::endl;

@@ -8,9 +8,12 @@
 #include <cstdio>
 #include <fstream>
 #include <cassert>
+
 #include <functional>
-#include <thread>
 #include <mutex>
+#include <thread>
+#include <future>
+
 #include <chrono>
 #include <numeric>
 #include <algorithm>
