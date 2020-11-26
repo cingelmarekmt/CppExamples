@@ -32,13 +32,10 @@ int main()
 	{
 		const auto threadPool = std::make_shared<ThreadPoolF>();
 
-		for (int index = 0; index < 10; ++index)
+		for (int index = 0; index < 1; ++index)
 		{
-			std::cout << "HERE 1" << std::endl;
 			const auto threadTask = std::make_shared<ThreadTaskF>();
-			threadTask->Init();
 			threadPool->Add(threadTask);
-			std::cout << "HERE 2" << std::endl;
 		}
 
 		std::cout << "Task count: [" << threadPool->Size() << "]" << std::endl;
