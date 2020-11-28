@@ -91,7 +91,7 @@ namespace example
 	void ThreadPoolF::Thread()
 	{
 		std::cout << "Thread [" << std::this_thread::get_id() << "] starting..." << std::endl;
-		const auto minStepInterval = std::chrono::milliseconds(15);
+		const auto minStepInterval = std::chrono::milliseconds(150);
 
 		while (_isRunning.load(std::memory_order_relaxed))
 		{

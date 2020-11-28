@@ -32,7 +32,7 @@ int main()
 	{
 		const auto threadPool = std::make_shared<ThreadPoolF>();
 
-		for (int index = 0; index < 10; ++index)
+		for (int index = 0; index < 100; ++index)
 		{
 			std::cout << "HERE 1" << std::endl;
 			const auto threadTask = std::make_shared<ThreadTaskF>();
