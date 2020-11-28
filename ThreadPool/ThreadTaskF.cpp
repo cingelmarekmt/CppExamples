@@ -30,18 +30,13 @@ namespace example
 		return _id;
 	}
 
-	void ThreadTaskF::Init()
-	{
-		//std::packaged_task<void()> task(std::bind(&ThreadTaskF::StepInternal, shared_from_this()));
-		//_task = std::packaged_task<void()>(std::bind(&ThreadTaskF::StepInternal, shared_from_this()));
-	}
-
 	void ThreadTaskF::StartStep()
 	{
-		//const auto future = _task.get_future();
-		//future.wait();
-
+		//const auto t1 = std::chrono::high_resolution_clock::now();
 		_future = std::async(std::launch::async, std::bind(&ThreadTaskF::StepInternal, shared_from_this()));
+		//const auto t2 = std::chrono::high_resolution_clock::now();
+		//const auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1);
+		//std::cout << "StartStep duration: [" << duration.count() << "]" << std::endl;
 	}
 
 	void ThreadTaskF::StepInternal()
@@ -52,7 +47,11 @@ namespace example
 
 	void ThreadTaskF::StopStep()
 	{
+		//const auto t1 = std::chrono::high_resolution_clock::now();
 		_future.get();
+		//const auto t2 = std::chrono::high_resolution_clock::now();
+		//const auto duration = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
+		//std::cout << "StopStep duration: [" << duration.count() << "]" << std::endl;
 	}
 
 }

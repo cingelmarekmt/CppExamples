@@ -15,7 +15,9 @@
     <ClCompile Include="ThreadPoolF.cpp">
       <Filter>ThreadPoolF</Filter>
     </ClCompile>
-    <ClCompile Include="ThreadTaskF.cpp" />
+    <ClCompile Include="ThreadTaskF.cpp">
+      <Filter>ThreadPoolF</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PrecompiledDeclarations.h" />
@@ -31,7 +33,9 @@
     <ClInclude Include="ThreadPoolF.h">
       <Filter>ThreadPoolF</Filter>
     </ClInclude>
-    <ClInclude Include="ThreadTaskF.h" />
+    <ClInclude Include="ThreadTaskF.h">
+      <Filter>ThreadPoolF</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ThreadPool">

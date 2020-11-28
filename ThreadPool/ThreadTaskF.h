@@ -26,8 +26,6 @@ namespace example
 
 	public:
 
-		void Init();
-
 		void StartStep();
 		void StepInternal();
 		void StopStep();
